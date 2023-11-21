@@ -1,0 +1,22 @@
+<!-- Ajoutez cette section à la suite de votre code existant -->
+
+<!-- Section Produits en Vedette -->
+<section class="featured-products">
+    <div class="container">
+        <h2>Produits en Vedette</h2>
+        <div class="row">
+            <!-- Utilisation de la boucle pour afficher les produits -->
+            {% for produit in produits %}
+                <div class="col-md-4">
+                    <div class="product">
+                        <img src="{{ asset('images/placeholder.jpg') }}" alt="{{ produit.nom }}">
+                        <h3>{{ produit.nom }}</h3>
+                        <p>{{ produit.description }}</p>
+                        <span class="price">Prix : {{ produit.prix }} €</span>
+                        <a href="#" class="btn btn-primary">Acheter</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

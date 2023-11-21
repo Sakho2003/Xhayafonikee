@@ -1,0 +1,154 @@
+{# templates/home/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block header %}
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('Asset/css/home.css') }}">
+{% endblock %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+
+    {# Bannière principale présentant les services #}
+
+{# templates/home/index.html.twig #}
+
+<section class="banner">
+    <div>
+        <h1>Bienvenue sur Notre Service de Transport de Colis</h1>
+        <p>Découvrez notre service de transport fiable et rapide vers la Mauritanie et le Sénégal.</p>
+        <a href="{{ path('app-envoi_colis') }}" class="btn btn-primary">Envoyer un Colis</a>
+        <a href="{{ path('app-suivi_colis') }}" class="btn btn-secondary">Suivre un Colis</a>
+        </div>
+</section>
+
+
+    {#section banniere(2)#}
+            
+        <section class="second-banner" mx-auto>
+            <div class="container">
+            </div>
+        </section>
+        
+            {#Section boutique#}
+
+        <section class="boutique">
+    <div>
+        <h2>Nos Chaussures</h2>
+        <div class="products">
+            <div class="product">
+                <img src="{{ asset('images/CH4.jpg') }}" alt="Chaussure 1">
+                <h3>Chaussure élégante</h3>
+                <p>Chaussure élégante pour toutes les occasions. Confortable et stylée.</p>
+                <span class="price">Prix : 59,99 €</span>
+                <a href="{{ path('app-details_produit') }}" class="btn btn-primary">Acheter</a>
+            </div>
+            <div class="product">
+                <img src="{{ asset('images/SHOES1.jpg') }}" alt="Chaussure 2">
+                <h3>Baskets à la mode</h3>
+                <p>Baskets légères, idéales pour le quotidien. Confortables et à la mode.</p>
+                <span class="price">Prix : 49,99 €</span>
+                <a href="#" class="btn btn-primary">Acheter</a>
+            </div>
+            <div class="product">
+                <img src="{{ asset('images/SHOES2.jpg') }}" alt="Chaussure 3">
+                <h3>Chaussure de sport</h3>
+                <p>Chaussure de sport haute performance. Conçue pour l'endurance et le confort.</p>
+                <span class="price">Prix : 79,99 €</span>
+                <a href="#" class="btn btn-primary">Acheter</a>
+            </div>
+            <div class="product">
+                <img src="{{ asset('images/SHOES3.jpg') }}" alt="Chaussure 4">
+                <h3>Sandales estivales</h3>
+                <p>Sandales confortables et stylées pour l'été. Idéales pour les vacances.</p>
+                <span class="price">Prix : 39,99 €</span>
+                <a href="#" class="btn btn-primary">Acheter</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{# Section de suivi des colis #}
+
+<section class="tracking">
+    <div >
+        <h2>Suivi des Colis</h2>
+
+        <div class="tracking-details">
+            <div class="tracking-item">
+                <h3>Colis 1</h3>
+                <p>Statut : En attente de livraison</p>
+                <p>Lieu : Dépôt central</p>
+                <p>Estimation de livraison : 25 Novembre 2023</p>
+            </div>
+
+            <div class="tracking-item">
+                <h3>Colis 2</h3>
+                <p>Statut : En transit</p>
+                <p>Lieu : En route vers la destination</p>
+                <p>Estimation de livraison : 27 Novembre 2023</p>
+            </div>
+            
+            <!-- Autres colis -->
+            <div class="tracking-item">
+                <h3>Colis 3</h3>
+                <p>Statut : Livré</p>
+                <p>Lieu : Destinataire</p>
+                <p>Date de livraison : 22 Novembre 2023</p>
+            </div>
+            
+            <div class="tracking-item">
+                <h3>Colis 4</h3>
+                <p>Statut : En transit</p>
+                <p>Lieu : En route vers le dépôt local</p>
+                <p>Estimation de livraison : 29 Novembre 2023</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{#
+<section class="special-offers">
+    <div class="container">
+        <h2>Offres Spéciales</h2>
+
+        <!-- Promotion 1 -->
+        <div class="promotion">
+            <img src="image_promo_1.jpg" alt="Offre Spéciale 1">
+            <h3>Offre Spéciale 1</h3>
+            <p>Réduction de 20% sur les envois groupés vers la Mauritanie.</p>
+            <p><strong>Valable jusqu'au 31 décembre 2023</strong></p>
+            <a href="#" class="btn btn-primary">En savoir plus</a>
+        </div>
+
+        <!-- Promotion 2 -->
+        <div class="promotion">
+            <img src="image_promo_2.jpg" alt="Offre Spéciale 2">
+            <h3>Offre Spéciale 2</h3>
+            <p>Utilisez le code "ENVOI10" pour obtenir 10% de réduction sur votre premier envoi.</p>
+            <p><strong>Valable pour les nouveaux utilisateurs jusqu'au 15 janvier 2024</strong></p>
+            <a href="#" class="btn btn-primary">En savoir plus</a>
+        </div>
+
+        <!-- Promotion 3 et plus... -->
+        <!-- Ajoutez autant de promotions que vous le souhaitez en suivant le modèle ci-dessus -->
+    </div>
+</section>
+  #}
+
+
+    {# Pied de page avec coordonnées de contact et réseaux sociaux #}
+
+
+{% endblock %}

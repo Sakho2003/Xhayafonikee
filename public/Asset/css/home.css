@@ -1,0 +1,398 @@
+/* Asset/css/home.css */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+
+/* Réinitialisation des styles par défaut des navigateurs */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+header .logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.user-actions {
+    text-align: right;
+}
+
+nav {
+    text-align: left;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+.banner {
+    background-color: rgb(118, 134, 99); /* Exemple de couleur de fond */
+    text-align: center;
+    color: #fff;
+    padding: 100%;
+}
+
+.second-banner {
+    background-image: url('/banniere.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    padding: 15% 0;
+}
+
+.second-banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.second-banner p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: hsl(6, 78%, 57%);
+}
+
+.btn-secondary {
+    background-color: hsl(6, 78%, 57%);
+}
+/* Style pour le footer */
+footer {
+    background-color: #333; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 20px; /* Espacement intérieur */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style pour la section de contact */
+.footer-contact {
+    max-width: 300px; /* Largeur maximale de la section de contact */
+}
+
+.footer-contact h3 {
+    color: #ffcc00; /* Couleur du titre */
+}
+
+.footer-contact p {
+    margin: 5px 0; /* Marge autour des paragraphes */
+}
+
+/* Style pour la section des réseaux sociaux */
+.social-media {
+    max-width: 200px; /* Largeur maximale de la section des réseaux sociaux */
+}
+
+.social-media h3 {
+    color: #ffcc00; /* Couleur du titre */
+}
+
+.social-media ul {
+    list-style: none; /* Supprimer les puces de la liste */
+    padding: 0; /* Supprimer le remplissage par défaut */
+}
+
+.social-media li {
+    display: inline-block; /* Afficher les éléments de liste en ligne */
+    margin-right: 10px; /* Marge à droite entre les icônes */
+}
+
+.social-media a {
+    color: #fff; /* Couleur du lien */
+    text-decoration: none; /* Supprimer la décoration du texte */
+    font-size: 20px; /* Taille de la police des icônes */
+}
+
+/* Style pour les nouvelles sections ajoutées */
+.newsletter,
+.quick-links,
+.testimonials {
+    margin-top: 20px; /* Marge en haut de chaque nouvelle section */
+}
+
+.newsletter h3,
+.quick-links h3,
+.testimonials h3 {
+    color: #ffcc00; /* Couleur du titre */
+}
+
+.newsletter p,
+.quick-links ul,
+.testimonials blockquote {
+    margin: 10px 0; /* Marge autour des paragraphes et des blocs de citation */
+}
+
+.newsletter input,
+.newsletter button {
+    margin-top: 10px; /* Marge en haut du champ d'entrée et du bouton */
+}
+
+/* Style pour le formulaire de newsletter */
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter input {
+    padding: 5px; /* Remplissage du champ d'entrée */
+}
+
+.newsletter button {
+    background-color: #ffcc00; /* Couleur de fond du bouton */
+    color: #333; /* Couleur du texte du bouton */
+    border: none; /* Supprimer la bordure du bouton */
+    padding: 8px 12px; /* Remplissage du bouton */
+    cursor: pointer; /* Curseur pointer pour indiquer que c'est un bouton cliquable */
+}
+
+/* Style pour les liens rapides */
+.quick-links ul {
+    padding-left: 0; /* Supprimer le remplissage à gauche de la liste */
+}
+
+.quick-links li {
+    margin-bottom: 5px; /* Marge en bas de chaque élément de liste */
+}
+
+.quick-links a {
+    color: #fff; /* Couleur du lien rapide */
+    text-decoration: none; /* Supprimer la décoration du texte */
+}
+
+/* Style pour les témoignages */
+.testimonials blockquote {
+    font-style: italic; /* Style italic pour le bloc de citation */
+}
+
+.testimonials cite {
+    display: block; /* Afficher le nom du client en bloc en dessous de la citation */
+    text-align: right; /* Aligner le nom du client à droite */
+    color: #999; /* Couleur du nom du client */
+    font-size: 14px; /* Taille de la police du nom du client */
+}
+
+
+
+.boutique {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.boutique h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #3498db;
+}
+
+/* Ajoutez des styles supplémentaires selon vos besoins */
+
+
+
+
+.tracking {
+    background-color: #f3f3f3;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.tracking h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.tracking-details {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tracking-item {
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tracking-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tracking-item p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* 
+.special-offers {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.special-offers .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.promotion {
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.promotion img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.promotion h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.promotion p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.promotion a {
+    display: inline-block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.promotion a:hover {
+    background-color: #2779bd;
+}
+
+
+*/

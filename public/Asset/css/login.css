@@ -1,0 +1,32 @@
+/* Asset/css/login.css */
+
+.container {
+    text-align: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.card-title {
+    color: #333;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}

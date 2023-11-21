@@ -1,0 +1,80 @@
+{# templates/envoi_colis.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Envoyer un Colis{% endblock %}
+
+{% block header %}
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('Asset/css/envoiscolis.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-box"></i> Formulaire de réservation</h5>
+
+                        <!-- Formulaire de réservation -->
+                        <form id="reservationForm">
+                            <!-- Section Expéditeur -->
+                            <h6 class="card-subtitle mb-3 mt-4"><i class="fas fa-user"></i> Informations sur l'expéditeur</h6>
+                            <div class="mb-3">
+                                <label for="expediteur-nom" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="expediteur-nom" name="expediteur-nom" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="expediteur-adresse" class="form-label">Adresse</label>
+                                <input type="text" class="form-control" id="expediteur-adresse" name="expediteur-adresse" required>
+                            </div>
+
+                            <!-- Section Destinataire -->
+                            <h6 class="card-subtitle mb-3 mt-4"><i class="fas fa-user"></i> Informations sur le destinataire</h6>
+                            <div class="mb-3">
+                                <label for="destinataire-nom" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="destinataire-nom" name="destinataire-nom" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="destinataire-adresse" class="form-label">Adresse</label>
+                                <input type="text" class="form-control" id="destinataire-adresse" name="destinataire-adresse" required>
+                            </div>
+
+                            <!-- Section Détails du colis -->
+                            <h6 class="card-subtitle mb-3 mt-4"><i class="fas fa-box-open"></i> Détails du colis</h6>
+                            <div class="mb-3">
+                                <label for="poids" class="form-label">Poids du colis (en kg)</label>
+                                <input type="number" class="form-control" id="poids" name="poids" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description du colis</label>
+                                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                            </div>
+
+                            <!-- Bouton de réservation -->
+                            <button type="button" class="btn btn-primary" onclick="submitReservation()"><i class="fas fa-paper-plane"></i> Réserver le transport</button>
+                        </form>
+
+                        <!-- Section de suivi en temps réel -->
+                        <div id="trackingSection" style="display: none;">
+                            <h6 class="card-subtitle mb-3 mt-4"><i class="fas fa-map-marker-alt"></i> Suivi en temps réel</h6>
+                            <p id="statusUpdate"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
